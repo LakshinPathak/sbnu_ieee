@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+
+  <head>
+    <style>
+      .column1 {
+        float: left;
+        width: 25%;
+        padding: 5px;
+      }
+
+      /* Clearfix (clear floats) */
+      .row1::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+
+      .carousel .xyz {
+        /* height: auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+        height: 500px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        /* Set background color to transparent */
+        background-color: transparent;
+        display: none;
+      }
+
+      /* Responsive CSS */
+
+      @media only screen and (max-width: 1024px) {
+
+        /* For Tablet: */
+        section.content h1 {
+          font-size: 45px;
+          line-height: 45px;
+          margin-top: 22px;
+          margin-bottom: 20px;
+        }
+
+      }
+
+      @media only screen and (max-width: 768px) {
+
+        /* For mobile phones: */
+        [class*="col-"] {
+          width: 100%;
+        }
+
+
+        .header_inner_Wrapper {
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+
+        header nav {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin-left: unset;
+          width: 100%;
+        }
+
+        header nav li {
+          display: block;
+          width: 50%;
+        }
+
+        header nav li a {
+          width: 100%;
+        }
+
+
+        section.content h1,
+        section.subscribe h2 {
+          font-size: 35px;
+          line-height: 35px;
+        }
+
+        section.content p,
+        section.subscribe p {
+          font-size: 18px;
+        }
+
+        .carousel .xyz {
+          height: 180px;
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IEEE SBNU</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="unpkg.com/aos%403.0.0-beta.6/dist/aos.css" />
+
+    <link rel="stylesheet" href="cdn.jsdelivr.net/npm/bulma%400.9.1/css/bulma.min.css" />
+    <!-- <link rel="shortcut icon" href="assets/images/Condensed---White-Circle.ico" /> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&amp;display=swap" rel="stylesheet" />
+    <script src="unpkg.com/%40lottiefiles/lottie-player%402.0.3/dist/lottie-player.js"></script>
+    <!-- <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script> -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <link href="css/css.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/font.css" />
+    <!-- <link href="css/style.css" rel="stylesheet"/> -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="../www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!-- <script src="www.gstatic.com/firebasejs/8.3.3/firebase-analytics.js"></script>
+  <script src="www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script> -->
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+
+
+
+    <!-- <link rel="stylesheet" href="./asset/css/style.css" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#carouselExampleControls").carousel({
+          interval: 2000, // Set the interval in milliseconds (4 seconds in this case)
+        });
+      });
+    </script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyDhfTomFg03nXW2cD1RIysGXydVHHUNC0c",
+        authDomain: "nisb-website.firebaseapp.com",
+        projectId: "nisb-website",
+        storageBucket: "nisb-website.appspot.com",
+        messagingSenderId: "30096523025",
+        appId: "1:30096523025:web:e8351e5e22b937113cd6b0",
+        measurementId: "G-68PBHNGZP7",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+  </head>
+
+  <body>
+
+
+
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <nav class="navbar d-flex justify-content-between" role="navigation" style="
+        background-color: rgb(92, 189, 246);
+        z-index: 10000000;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      " aria-label="main navigation">
+      <div class="navbar-brand d-flex justify-content-between">
+        <a class="navbar-item">
+          <img src="assets/images/logo.png" alt="SBNU LOGO" style="padding: 0 0.75rem" />
+          <img src="assets/images/nirma1.jpeg" alt="Nirma LOGO" style="padding: 0 0.75rem; max-height: 40px;" />
+          <img src="assets/images/IEEEWIE_Gujarat.png" alt="WIE LOGO" style="padding: 0 0.75rem; max-height: 50px;" />
+
+          <!-- <div class="navbar-item has-text-black-light">IEEE SBNU</div> -->
+        </a>
+
+      </div>
+      <div>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu" style="background-color: rgb(92, 189, 246)">
+        <div class="navbar-start">
+
+          <a href="sampark.html" class="navbar-item">
+            <div class="navbar-item has-text-black-light" style="animation: blinker 1s linear infinite;color: yellow;">
+              SAMPARK'24</div>
+          </a>
+          <a href="Past Events\Home.html" class="navbar-item">
+            <div class="navbar-item has-text-black-light"> Past Events</div>
+          </a>
+          <a href="#team" class="navbar-item">
+            <div class="navbar-item has-text-black-light">Team</div>
+          </a>
+          <a href="#chapters" class="navbar-item">
+            <div class="navbar-item has-text-black-light">
+              Chapters & Sub Chapters
+            </div>
+          </a>
+          <a href="#contact" class="navbar-item">
+            <div class="navbar-item has-text-black-light">Contact</div>
+          </a>
+        </div>
+      </div>
+
+
+
+    </nav>
+
+
+
+
+
+    <header style="padding-top: 10vh; min-height: 100vh" id="about">
+
+
+
+      <br>
+
+      <!-- <a class="bdc-marquee-div" href="https://forms.gle/9rEbAjcK6VvafQD79" target="_blank">
+
+     
+      <h2>Sampark'24</h2>
+      <h2>Sampark'24</h2>
+      <h2>Sampark'24</h2>
+      <h2>Sampark'24</h2>
+      <h2>Sampark'24</h2>
+      <h2>Sampark'24</h2>
+      <h2>Sampark'24</h2>
+    
+     
+    </a> -->
+      <a href="https://forms.gle/9rEbAjcK6VvafQD79" target="_blank">
+        <marquee>
+          <p style="font-family: Impact; font-size: 18pt; color:white;">🚀 Sampark'24 🚀 Sampark'24 🚀 Sampark'24 🚀
+            Sampark'24 🚀 Sampark'24 🚀 Sampark'24 🚀 Sampark'24 🚀 Sampark'24 🚀 Sampark'24 🚀 Sampark'24</p>
+        </marquee>
+      </a>
+
+
+
+
+
+
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="xyz" style="background-image: url('assets/images/image_2.jpg')">
+
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="xyz" style="background-image: url('assets/images/image_5.jpg')">
+
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="xyz" style="background-image: url('assets/images/image_4.jpg')">
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="columns" style="max-width: 100vw; margin: 40px 0;">
+        <div class="column is-6 is-offset-1">
+          <div class="special-title">What is IEEE ?</div>
+          <p>
+            IEEE, the Institute Of Electrical and Electronics Engineers, is a
+            premier technical and world's leading professional institution. IEEE
+            stands for advancement of technology for the benefit of humanity, at
+            the same time bringing members access to the industry's most
+            essential technical information, networking opportunities, career
+            development tools, and many other exclusive benefits. Providing
+            students with an opportunity to interact with academicians and
+            professionals, so as to benefit from their knowledge.
+          </p>
+          <br />
+
+          <br />
+          <div class="special-title">Why SBNU ?</div>
+          <p>
+            <!-- SBNU conducts various kinds of workshops, webinars, technical talks,
+            competitions, events, etc througout the year to help students for
+            the all round development with the advancing technology. -->
+
+            SBNU hosts a variety of workshops, seminars, webinars, technical talks, competitions, and events throughout
+            the semester, aiming to support its members in achieving comprehensive development aligned with the latest
+            technological advancements.
+          </p>
+          <br />
+          <br />
+          <div class="special-title">
+            Meet Our Faculty Advisor
+          </div>
+          <br>
+          <div class="row">
+            <!-- Image on the left (col-md-6 for medium and larger screens) -->
+            <div class="col-md-6">
+              <!--         
+            <img alt="Name1"  class="img-fluid" src="assets/images/faculty.png"
+    style="display: block; margin-left: auto; margin-right: auto; height: 300px;"> -->
+              <img alt="Manisha Shah" class="img-fluid"
+                style="display: block; margin-left: auto; margin-right: auto; height: 300px;"
+                src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=iYBmeHMAAAAJ&citpid=2"
+                id="gsc_prf_pup-img"
+                srcset="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=iYBmeHMAAAAJ&citpid=2 128w, https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=iYBmeHMAAAAJ&citpid=2 224w">
+            </div>
+
+            <!-- Content on the right (col-md-6 for medium and larger screens) -->
+            <div class="col-md-6">
+              <p>Dr. Manisha Shah is working as an assistant professor at the department of electrical engineering,
+                institute of technology, Nirma University. Dr. Shah has published many research papers in international
+                / national journals and conferences. Her areas of interest are power electronics converters, power
+                supplies, multi-level converters, power quality improved devices and renewable source integration to
+                grid. She is a senior member of IEEE, USA, and a life member of ISTE. She is also serving as Ex-Com
+                member of IEEE Gujarat section from last three years.
+              </p>
+            </div>
+          </div>
+
+          <!-- <p>
+         
+          <img alt="Name1" src="assets/images/faculty.png"
+    style="display: block; margin-left: auto; margin-right: auto; height: 300px;">
+<br>
+
+Dr. Manisha Shah is working as an assistant professor at the department of electrical engineering, institute of technology, Nirma University. Dr. Shah has published many research papers in international / national journals and conferences. Her areas of interest are power electronics converters, power supplies, multi-level converters, power quality improved devices and renewable source integration to grid. She is a senior member of IEEE, USA, and a life member of ISTE. She is also serving as Ex-Com member of IEEE Gujarat section from last three three year.
+    
+        </p> -->
+          <br /><br />
+          <!-- <a
+            href="https://discord.gg/9kyEejWanq"
+            class="button is-info external-buttons"
+          > -->
+
+          <a href="https://www.linkedin.com/company/ieee-student-branch-nirma-university/?originalSubdomain=in"
+            class="button is-link external-buttons">
+            <ion-icon name="logo-linkedin"></ion-icon>
+            <b>LinkedIn</b>
+          </a>
+          <!-- <a
+            href="https://github.com/nisbweb"
+            class="button is-dark external-buttons"
+          >
+            <ion-icon name="logo-github"></ion-icon> &nbsp;
+            <b>Github</b>
+          </a> -->
+          <a href="https://www.instagram.com/ieeenirma/?hl=en" class="button is-warning external-buttons">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <b>Instagram</b>
+          </a>
+
+          <a href="https://www.ieee.org/" class="button is-primary external-buttons">
+            <b>IEEE Global</b>
+          </a>
+          <!-- <br /><br /> -->
+
+          <div class="special-title"></div>
+          <div class="columns">
+            <!-- <div class="pub column">
+              <img src="assets/images/manas2023.png" alt="Manas 2023" />
+              <div>
+                <h1>MANAS</h1>
+                <h4>NISB Odd Sem Newsletter</h4>
+                <a
+                  href="https://drive.google.com/file/d/1X_Y8EgUA7FaaZ4YiaG7jz8mgeNJASosf/view?usp=share_link"
+                  target="_blank"
+                  >Read more -></a
+                >
+              </div>
+            </div> -->
+            <div class="pub column">
+              <!-- <img src="assets/images/jijnasa.png" alt="Manas Main" /> -->
+              <div>
+                <!-- <h1>JIJNASA</h1>
+                <h4>NISB Yearly Magazine</h4>
+                <a
+                  href="https://drive.google.com/file/d/1kL_QwOmXDf5GSi5Rmg21pdw1jMBKsiy9/view?usp=sharing"
+                  >Read more -></a
+                > -->
+              </div>
+            </div>
+          </div>
+          <!-- <a
+            href="https://blog.nisb.in/"
+            class="button is-primary external-buttons"
+          >
+            <ion-icon name="book-outline"></ion-icon> &nbsp;
+            <b>Check out our blog here </b> -->
+          <!-- </a> -->
+          <!-- <a
+            href="https://ieeebangalore.org/newsletters/"
+            class="button is-danger external-buttons"
+          >
+            <ion-icon name="book-outline"></ion-icon> &nbsp;
+            <b>IEEE Banagalore Section Newsletters --></b>
+          <!-- </a>  -->
+        </div>
+        <div class="column is-5 lottieHeader">
+          <lottie-player src="assets/JSON/discuss.json" background="transparent.html" speed="1" loop autoplay>
+          </lottie-player>
+        </div>
+      </div>
+    </header>
+
+    <div style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        ">
+      <h1 style="font-weight: bold; font-size: 1.5rem; margin-top: 2rem">
+        Call for Volunteers For Sampark'24!!! 🎊
+      </h1>
+
+      <center>
+
+
+        <p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScaHFV4d5hEYNkq9PhPtzPqc6BIbu35WhGDpTdNblIJ_x82sA/viewform"
+            target="_blank" class="button is-danger external-buttons">For
+            Volunteering</a>
+          <!-- <a href="https://bit.ly/IEEEvolunteering" target="_blank" class="button is-danger external-buttons">Volunteering for 2nd/3rd/4th years</a>
+          -->
+        </p>
+      </center>
+
+    </div>
+
+    <!-- Timeline thingy -->
+    <section style="margin-top: 10em; text-align: center" id="activities">
+      <div class="head-norm">
+        <h1 style="font-size: small">Yearly Plan 2024</h1>
+      </div>
+    </section>
+    <div style="margin-left: 10%; margin-right: 10%" class="program_details_area detials_bg_1 overlay2">
+
+      <div class="program_detail_wrap">
+
+
+        <div class="single_propram">
+          <div class="inner_wrap">
+            <div class="circle_img"></div>
+            <div class="porgram_top">
+              <span class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">WIE Symposium</span>
+              <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+
+              </h4>
+              <!-- <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s"><span class="timer1"></span></h4> -->
+            </div>
+            <div class="thumb wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+              <br /><br /><br /><br />
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="single_propram">
+          <div class="inner_wrap">
+            <div class="circle_img"></div>
+            <div class="porgram_top">
+              <span class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s"> Research Week</span>
+              <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+
+              </h4>
+              <!-- <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s"><span class="timer2"></span></h4> -->
+            </div>
+            <div class="thumb wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s"></div>
+          </div>
+        </div>
+
+        <div class="single_propram">
+          <div class="inner_wrap">
+            <div class="circle_img"></div>
+            <div class="porgram_top">
+              <span class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">EmpowHER 2.0</span>
+              <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+
+              </h4>
+              <!-- <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s"><span class="timer3"></span></h4> -->
+            </div>
+            <div class="thumb wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
+              <br /><br /><br /><br />
+            </div>
+          </div>
+        </div>
+        <div class="single_propram">
+          <div class="inner_wrap">
+            <div class="circle_img"></div>
+            <div class="porgram_top">
+              <span class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">Docker Workshop</span>
+              <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+
+              </h4>
+              <!-- <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s"><span class="timer4"></span></h4> -->
+            </div>
+            <div class="thumb wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s"></div>
+          </div>
+        </div>
+
+
+        <div class="single_propram">
+          <div class="inner_wrap">
+            <div class="circle_img"></div>
+            <div class="porgram_top">
+              <span class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">YP seminar</span>
+              <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+
+              </h4>
+              <!-- <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s"><span class="timer3"></span></h4> -->
+            </div>
+            <div class="thumb wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
+              <br /><br /><br /><br />
+            </div>
+          </div>
+        </div>
+
+        <div class="single_propram">
+          <div class="inner_wrap">
+            <div class="circle_img"></div>
+            <div class="porgram_top">
+              <span class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">Robotics Workshop</span>
+              <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+
+              </h4>
+              <!-- <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s"><span class="timer2"></span></h4> -->
+            </div>
+            <div class="thumb wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s"></div>
+          </div>
+        </div>
+
+
+
+        <div class="single_propram">
+          <div class="inner_wrap">
+            <div class="circle_img"></div>
+            <div class="porgram_top">
+              <span class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">MATLAB workshop</span>
+              <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+
+              </h4>
+              <!-- <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s"><span class="timer3"></span></h4> -->
+            </div>
+            <div class="thumb wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
+              <br /><br /><br /><br />
+            </div>
+          </div>
+        </div>
+
+
+        <div class="single_propram">
+          <div class="inner_wrap">
+            <div class="circle_img"></div>
+            <div class="porgram_top">
+              <span class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">Vartalabh 2.0</span>
+              <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+
+              </h4>
+              <!-- <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s"><span class="timer2"></span></h4> -->
+            </div>
+            <div class="thumb wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Card List -->
+
+    <!-- <div class="card-list-cont" id="events">
+
+      <section style="text-align: center">
+        <div class="head-norm">
+          <h1>Events</h1>
+        </div>
+      </section>
+      <section id="card-list" class="card-list">
+       
+      </section>
+      
+    </div> -->
+
+    <div class="team" id="team">
+      <section style="text-align: center">
+        <div class="head-norm">
+          <h1>EXECOM'24</h1>
+        </div>
+      </section>
+    </div>
+
+
+    <section class="team-grid" style="text-align: center">
+      <div style="
+            background-position: center;
+            background-image: url('assets/images/vidhi5.jpg');
+          " class="team-div">
+        <div class="desc">
+          <h1>Vidhi Ruparelia</h1>
+          <h4> IEEE Chairperson</h4>
+        </div>
+      </div>
+      <div style="
+            background-position: center;
+            background-image: url('assets/images/kajal2.jpg');
+          " class="team-div">
+        <div class="desc">
+          <h1>Kajal Lochab</h1>
+          <h4>WIE Chairperson</h4>
+        </div>
+      </div>
+      <div style="
+            background-position: center;
+            background-image: url('assets/images/alay.jpg');
+          " class="team-div">
+        <div class="desc">
+          <h1>Alay Patel</h1>
+          <h4>IEEE Vice-Chairperson</h4>
+        </div>
+      </div>
+      <div style="
+            background-position: center;
+            background-image: url('assets/images/prem2.jpg');
+          " class="team-div">
+
+        <div class="desc">
+          <h1>Prem Joshi</h1>
+          <h4>WIE Vice-Chairperson</h4>
+        </div>
+
+      </div>
+
+      <div style="
+            background-position: center;
+            background-image: url('assets/images/chinmay.jpg');
+          " class="team-div">
+        <div class="desc">
+          <h1>Chinmay Trivedi</h1>
+          <h4>IEEE General Secretary</h4>
+        </div>
+      </div>
+      <div style="
+            background-position: center;
+            background-image: url('assets/images/shreya3.jpg');
+          " class="team-div">
+        <div class="desc">
+          <h1>Shreya Nahta</h1>
+          <h4>WIE General Secretary</h4>
+        </div>
+      </div>
+      <div style="
+            background-position: center;
+            background-image: url('assets/images/vrushank.jpg');
+          " class="team-div">
+        <div class="desc">
+          <h1>Vrushank Dabhi</h1>
+          <h4>Treasurer</h4>
+        </div>
+      </div>
+      <div style="
+            background-position: center;
+            background-image: url('assets/images/khushishah.jpg');
+          " class="team-div">
+        <div class="desc">
+          <h1>Khushi Shah</h1>
+          <h4>Student Branch Representative</h4>
+        </div>
+      </div>
+      <div style="
+            background-position: center;
+            background-image: url('assets/images/varun2.jpg');
+          " class="team-div">
+        <div class="desc">
+          <h1>Varun Makhija</h1>
+          <h4>Membership Development Officer</h4>
+        </div>
+      </div>
+
+      <div style="
+            background-position: center;
+            background-image: url('assets/images/vartika2.jpg');
+          " class="team-div">
+        <div class="desc">
+          <h1>Vartika Desai</h1>
+          <h4>Membership Development Officer</h4>
+        </div>
+      </div>
+      <div style="
+            background-position: center;
+            background-image: url('assets/images/lakshin_image.jpg');
+          " class="team-div">
+        <div class="desc">
+          <h1>Lakshin Pathak</h1>
+          <h4>Technical Head</h4>
+        </div>
+      </div>
+      <div style="
+            background-position: center;
+            background-image: url('assets/images/jaival6.png');
+          " class="team-div">
+        <div class="desc">
+
+          <h1>Jaival Chhag</h1>
+          <h4>Technical Head</h4>
+        </div>
+      </div>
+      <div style="
+            background-position: center;
+            background-image: url('assets/images/khushi_patel2.jpg');
+          " class="team-div">
+        <div class="desc">
+          <h1>Khushi Patel</h1>
+          <h4>Creative Head</h4>
+        </div>
+      </div>
+      <div style="
+            background-position: center;
+            background-image: url('assets/images/tanisha3.jpg');
+          " class="team-div">
+        <div class="desc">
+          <h1>Tanisha Patel</h1>
+          <h4>Creative Head</h4>
+        </div>
+      </div>
+
+      </div>
+      <div></div>
+
+    </section>
+    </div>
+    <br><br><br>
+    <div class="chapters" id="chapters">
+      <section style="text-align: center">
+        <div class="head-norm">
+          <h1>Chapters and Sub Chapters</h1>
+        </div>
+      </section>
+      <!-- width 100% to make sure it fits in the screen size-->
+      <div class="columns is-tablet society-card-parent">
+        <article class="card1 is-3 column">
+          <div class="container">
+            <header>
+              <img style="height: 100px" src="assets/images/wie.png" />
+              <br />
+              <h4 id="lf"><b>WOMEN IN ENGINEERING</b></h4>
+            </header>
+            <br /><br />
+            <p>
+              IEEE Women in Engineering (WIE) is one of the largest international professional organization dedicated to
+              promoting women engineers and scientists and inspiring girls around the world to follow their academic
+              interests to a career in engineering.
+            </p>
+            <br />
+            <a href="https://wie.ieee.org/" target="_blank">Read more &rarr;</a>
+          </div>
+        </article>
+        <article class="card1 is-3 column ">
+          <div class="container">
+            <header>
+              <img style="height: 100px" src="assets/images/cs.png" />
+              <br />
+              <h4 id="md"><b>COMPUTER SOCIETY</b></h4>
+            </header>
+            <br /><br />
+
+            <p>
+            <section>
+              <h1 class="text-shadow"> Coming Soon </h1>
+            </section>
+            </p>
+            <br />
+            <a href="https://www.computer.org/" target="_blank">Read more &rarr;</a>
+          </div>
+        </article>
+        <article class="card1 is-3 column">
+          <div class="container">
+            <header>
+              <img style="height: 100px" src="assets/images/sps5.png" />
+              <br />
+              <h4 id="ri"><b>SIGNAL PROCESSING SOCIETY</b></h4>
+            </header>
+            <br /><br />
+            <p>
+            <section>
+              <h1 class="text-shadow"> Coming Soon </h1>
+            </section>
+            </p>
+            <br />
+            <a href="https://signalprocessingsociety.org/" target="_blank">Read more &rarr;</a>
+          </div>
+        </article>
+      </div>
+      <div class="columns is-tablet society-card-parent">
+        <article class="card1 is-3 column">
+          <div class="container">
+            <header>
+              <img style="height: 100px" src="assets/images/ras.png" />
+              <br />
+              <h4 id="ri"><b>Robotics and Automation Society</b></h4>
+            </header>
+            <br /><br />
+            <p>
+            <section>
+              <h1 class="text-shadow"> Coming Soon </h1>
+            </section>
+            </p>
+            <br />
+            <a href="https://www.ieee-ras.org/" target="_blank">Read more &rarr;</a>
+          </div>
+        </article>
+        <article class="card1 is-3 column">
+          <div class="container">
+            <header>
+              <img style="height: 100px" src="assets/images/power.png" />
+              <br />
+              <h4 id="ri"><b>POWER ELECTRONICS SOCIETY</b></h4>
+            </header>
+            <br /><br />
+            <p>
+            <section>
+              <h1 class="text-shadow"> Coming Soon </h1>
+            </section>
+            </p>
+            <br />
+            <a href="https://www.ieee-pels.org/" target="_blank">Read more &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- <section class="sponsors">
+      <div class="head-norm">
+        <h1  style="color: #f1f4f7; font-size: 25px; text-align: center;">Bidding Adeiu: EXECOM'23</h1>
+        </div>
+       
+       
+              <img alt="Name1" src="assets/images/execom'23.jpg" class="img-fluid" style="height: 300px;">
+              <br><br>
+              <h3 style="color: #e9edf0; font-size: 28px;">EXECOM'23</h3>
+             
+              <br><br>
+
+
+              <div class="row gap-4">
+                <div class="col-md-3 col-12">
+                  <div class="member23">
+                    <img
+                      src="assets/images/ieee_chair.jpg"
+                      alt="Member 3"
+                      class="img-fluid"
+                      style="height: 300px"
+                    />
+                    <br>
+                    <h3 style="color: #edeff1">Palak</h3>
+                    <h3 style="color:#f5f7fa">IEEE Chairperson</h3>
+                  
+                  </div>
+                </div>
+      
+                <div class="col-md-3 col-12">
+                  <div class="member23">
+                    <img
+                      src="assets/images/ieee_vice_chair.jpg"
+                      alt="Member 5"
+                      class="img-fluid"
+                      style="height: 300px"
+                    />
+                    <br>
+                    <h3 style="color: #f2f4f6">Dhyan</h3>
+                    <h3 style="color: #f4f4f5">IEEE Vice-Chairperson</h3>
+                  
+                  </div>
+                </div>
+      
+                <div class="col-md-3 col-12">
+                  <div class="member23">
+                    <img
+                      src="assets/images/wie_chair.jpg"
+                      alt="Member 4"
+                      class="img-fluid"
+                      style="height: 300px"
+                    />
+                    <br>
+                    <h3 style="color: #f4f5f7">Sneha</h3>
+                    <h3 style="color: #f5f8fa">WIE Chairperson</h3>
+                   
+                  </div>
+                </div>
+      
+               
+      
+      
+                <div class="col-md-3 col-12">
+                  <div class="member23">
+                    <img
+                      src="assets/images/wie_vice_chair.jpg"
+                      alt="Member 6"
+                      class="img-fluid"
+                      style="height: 300px"
+                    />
+                    <br>
+                    <h3 style="color: #f4f5f7">Purva</h3>
+                    <h3 style="color: #f2f3f5">WIE Vice-Chairperson</h3>
+                   
+                  </div>
+                </div>
+              </div>
+              <br>
+              <br>
+             
+          
+
+
+
+        </section> -->
+
+    <div class="head-norm">
+      <h1 style="color: #f1f4f7; font-size: 25px; text-align: center;">Bidding Adeiu: EXECOM'23</h1>
+    </div>
+
+
+    <!-- <img alt="Name1" src="assets/images/execom'23.jpg"  style="height: 300px;"> -->
+    <img alt="Name1" src="assets/images/execom'23.jpg"
+      style="display: block; margin-left: auto; margin-right: auto; height: 300px;">
+
+    <br><br>
+
+    <div class="row1">
+      <div class="column1">
+        <img src="assets/images/ieee_chair.jpg" alt="Snow" style="width:100%;">
+      </div>
+      <div class="column1">
+        <img src="assets/images/ieee_vice_chair.jpg" alt="Forest" style="width:100%">
+      </div>
+      <div class="column1">
+        <img src="assets/images/wie_chair.jpg" alt="Mountains" style="width:100%">
+      </div>
+      <div class="column1">
+        <img src="assets/images/wie_vice_chair.jpg" alt="Mountains" style="width:100%">
+      </div>
+    </div>
+
+
+
+    <br>
+    <br>
+    <br>
+    <div class="contact" id="contact">
+      <section style="text-align: center">
+        <div class="head-norm">
+          <h1>Contact</h1>
+        </div>
+      </section>
+
+      <div class="columns" style="margin-right: 5vw; margin-left: 5vw">
+        <div class="column">
+          <!-- <iframe style="width: 100%"
+          src="https://www.google.com/maps/search/nirma+university+google+map/@23.1132892,72.5189653,14z/data=!3m1!4b1?entry=ttu"
+          width="600" height="300" frameborder="0" style="border: 0" allowfullscreen="" aria-hidden="false"
+          tabindex="0"></iframe> -->
+          <!-- original below -->
+          <!-- <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="560" id="gmap_canvas" src="https://maps.google.com/maps?q=%4023.1283286%2C72.5399209&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://online-timer.me/"></a><br><a href="https://www.tabclocktab.com/">clock tab</a><br><style>.mapouter{position: relative;text-align: right;height: 560px;width: 100%;}</style><a href="https://www.ongooglemaps.com">google maps embed</a><style>.gmap_canvas{overflow: hidden;background: none !important;height: 460px;width: 100%;}</style></div></div>
+       -->
+          <div style="width: 100%"><iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0"
+              marginwidth="0"
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Nirma%20University,%20Ahmedabad+(Nirma%20University)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                href="https://www.maps.ie/population/">Population mapping</a></iframe></div>
+        </div>
+
+
+        <div class="column is-7 contact-box">
+          <div class="columns">
+            <div class="column">
+              IEEE Student Branch <br />
+              Institute Of Technology
+              Nirma University<br />
+              Ahemdabad: 382481
+            </div>
+            <div class="column">
+              <a href="mailto:ieee@nirmauni.ac.in" style="color: #f1f4f7;">ieee@nirmauni.ac.in</a>
+            </div>
+          </div>
+
+          <!-- <div class="col-md-3 col-sm-6 col-xs-12 col-sm-6 col-xs-12">
+          <div class="d-flex flex-column">
+          <a href="mailto:ieee@nirmauni.ac.in" style="color: #fbf8f8;"> ieee@nirmauni.ac.in</a>
+          <a href="https://nirmauni.ac.in/" style="color: #fbf4f4;" >nirmauni.ac.in</a>
+        </div>
+        </div> -->
+
+
+
+          <!-- <div class="icons-con-box">
+            <a class="btn" href="https://www.instagram.com/ieeenirma?igsh=MXVudWpvdXVwMDB2eg==">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a class="btn" href="https://www.linkedin.com/company/ieee-student-branch-nirma-university/">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </div> -->
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <footer style="text-align: center;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12 col-sm-6 col-xs-12">
+            <h5>About</h5>
+            <p>
+              IEEE SBNU is a perfect place for engineers and computer science enthusiasts aiming to improve their
+              technical skills.
+            </p>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 col-sm-6 col-xs-12">
+            <h5>External Links</h5>
+            <div class="d-flex flex-column">
+              <!-- Change the class to d-flex flex-column -->
+              <a href="https://www.ieee.org//" style="color: #000;">IEEE.org</a>
+              <a href="https://standards.ieee.org/?_ga=2.166069502.1382483501.1627826864-1802152504.1622396110"
+                style="color: #000;">IEEE Standards</a>
+              <a href="https://spectrum.ieee.org/?_ga=2.202702929.1382483501.1627826864-1802152504.1622396110"
+                style="color: #000;">IEEE Spectrum</a>
+              <a href="https://ieeexplore.ieee.org/Xplore/home.jsp" style="color: #000;">IEEE Explore Digital
+                Library</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 col-sm-6 col-xs-12">
+            <h5>Contact</h5>
+            <div class="d-flex flex-column">
+              <a href="mailto:ieee@nirmauni.ac.in" style="color: #000;"> ieee@nirmauni.ac.in</a>
+              <a href="https://nirmauni.ac.in/" style="color: #000;">nirmauni.ac.in</a>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-xs-12 col-sm-6 col-xs-12">
+            <h5>Follow Us</h5>
+            <div class="d-flex flex-column">
+              <!-- Change the class to d-flex flex-column -->
+              <a href="https://www.instagram.com/ieeenirma?igsh=MXVudWpvdXVwMDB2eg==" style="color: #000;">Instagram</a>
+              <a href="https://www.linkedin.com/company/ieee-student-branch-nirma-university/"
+                style="color: #000;">Linkedin</a>
+              <a href="https://twitter.com/ieeeitnu" style="color: #000;">Twitter</a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <br />
+          <br />
+          <hr>
+          <br />
+
+          <p>All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- scripts -->
+    <script type="text/javascript" src="js/hamburger.js"></script>
+    <script type="text/javascript" src="js/smotthScroll.js"></script>
+    <script src="../unpkg.com/aos%403.0.0-beta.6/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script type="text/javascript" src="nisbevents-export.js"></script>
+    <script type="text/javascript" src="../cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+    <script type="text/javascript" src="js/firebase-content.js"></script>
+    <script src="../unpkg.com/ionicons%405.2.3/dist/ionicons.js"></script>
+    <script src="js/timer-hero.js"></script>
+    <script src="js/timer-top.js"></script>
+    <script src="js/announcement.js"></script>
+  </body>
+
+
+</html>
